@@ -1,5 +1,6 @@
 // add bongo cat on top
-// title logo with yellow JS text
+// create a nav bar for fast support page and about me etc
+// title logo with yellow JS text and marquee of contributors
 // add video redirect links to concepts of akshay saini
 // add QR code UPI for support developer and paypal and github link (or to make this site go live and become an opensource community)
 

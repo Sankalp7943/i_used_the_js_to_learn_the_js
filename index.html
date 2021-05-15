@@ -4,69 +4,72 @@
         <title>
             JS is &lt3
         </title>
-        <script defer src="myscripts.js"></script>
+        <link rel="icon" type="image/png" href="images/icon.png" />
+        <link rel="stylesheet" type="text/css" href="css/styles.css">
+        <script defer src="scripts/myscripts.js"></script>
     </head>
-    <body>
-        <marquee>
+    <body class = "completePage">
+        <marquee id="marquee">
             This should be taken as reference only! Please code side by side to learn efficiently!
         </marquee>
-        <div>
+        <div class = "header">
             <h1>
                 I used the JavaScript to learn the JavaScript
             </h1>
         </div>
         <div class="lesson" id="hoisting">
-            <h2>
-                Hoisting
-            </h2>
-            <h3>
-                Open console to observe outputs
-            </h3>
-            <div id="hoistingPrint">
-                <img src="images/hoisting.PNG">
-                <br>
-                <p id="hoistingFact">
-
-                </p>
-
+            <div class="innerLesson">
+                <h2 class="lessonHeading">
+                    Hoisting
+                </h2>
+                <h3 class="lessonSecondHeading">
+                    Open console to the right for observing outputs
+                </h3>
+                <div id="hoistingPrint">
+                    <img src="images/hoisting.PNG" class="image">
+                    <br>
+                    <p id="hoistingFact" class="fact">
+                    </p>
+                </div>
+                <button class="button" id = "hoistingButton">
+                    Start Program
+                </button>
+                <button class = "clearConsole button">
+                    Clear Console
+                </button>
+                <button  class="button" id = "hoistingLearn">
+                    Learn
+                </button>
             </div>
-            <button id = "hoistingButton">
-                Start Program
-            </button>
-            <button class = "clearConsole">
-                Clear Console
-            </button>
-            <button  id = "hoistingLearn">
-                Learn
-            </button>
         </div>
         <div class="lesson" id="scope">
-            <h2>
-                Scope & Variables
-            </h2>
-            <h3>
-                Open console to observe outputs
-            </h3>
-            <div id="scopePrint">
-                <img src="images/scope1.PNG">
-                <br>
-                <img src="images/scope2.PNG">
-                <br>
-                <img src="images/scope3.PNG">
-                <br>
-                <p id="scopeFact">
-
-                </p>
+            <div class="innerLesson">
+                <h2 class="lessonHeading">
+                    Scope & Variables
+                </h2>
+                <h3 class="lessonSecondHeading">
+                    Open console to the right for observing outputs
+                </h3>
+                <div id="scopePrint">
+                    <img src="images/scope1.PNG" class="image">
+                    <br>
+                    <img src="images/scope2.PNG" class="image">
+                    <br>
+                    <img src="images/scope3.PNG" class="image">
+                    <br>
+                    <p id="scopeFact" class="fact">
+                    </p>
+                </div>
+                <button class="button" id = "scopeButton">
+                    Start Program
+                </button>
+                <button class = "clearConsole button">
+                    Clear Console
+                </button>
+                <button  class="button" id = "scopeLearn">
+                    Learn (will open 2 tabs)
+                </button>
             </div>
-            <button id = "scopeButton">
-                Start Program
-            </button>
-            <button class = "clearConsole">
-                Clear Console
-            </button>
-            <button  id = "scopeLearn">
-                Learn (will open multiple tabs)
-            </button>
         </div>
         
 

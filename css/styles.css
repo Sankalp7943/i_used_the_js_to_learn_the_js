@@ -1,0 +1,85 @@
+.header {
+    padding: 0.1em;
+    text-align: center;
+    background: #1abcae;
+    color: #1a1a1a;
+    font-size: 30px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#marquee {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.completePage{
+    background: #1abcae;
+}
+
+.lesson{
+    margin: 1.5em;
+    background: #fafafa;
+    padding: 0.2em;
+    color: #1a1a1a;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.innerLesson{
+    padding: 1em;
+    padding-left: 2.5em;
+    padding-bottom: 2em;
+}
+
+.lessonHeading{
+    font-size: 30px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.lessonSecondHeading{
+    font-size: 18px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* .image{
+
+    display: block;
+    max-width:1000px;
+    max-height:2000px;
+    width: auto;
+    height: auto;
+    object-fit: scale-down;
+} */
+
+.fact {
+    color: #1a1a1a;
+    font-size: 15px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.button {
+    box-sizing: border-box;
+    appearance: none;
+    background-color: transparent;
+    border: 2px solid #1abcae;
+    border-radius: 0.6em;
+    color: #1abcae;
+    cursor: pointer;
+    display: inline-block;
+    align-self: center;
+    font-size: 1.1rem;
+    line-height: 1;
+    margin: .5em;
+    padding: 1.0em 2em;
+    text-decoration: none;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+}
+.button:hover {
+    color: #1abcae;
+    outline: 0;
+}
+.button:transition{
+    box-shadow: 100ms ease-in-out, color 100ms ease-in-out;
+}
+.button:hover {
+    box-shadow: 0 0 4px 4px #1abcae;
+}
