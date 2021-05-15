@@ -83,3 +83,29 @@
 .button:hover {
     box-shadow: 0 0 4px 4px #1abcae;
 }
+
+.flex-container {
+    display: flex;
+}
+
+.flex-child {
+    flex: 1;
+}  
+
+.flex-child:first-child {
+    margin-right: 20px;
+}
+
+.simulationHeading{
+    font-size: 18px;
+    font-weight: bold;
+    color: #1abcae;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.simulationCalls{
+    font-size: 18px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: red;
+
+}
