@@ -67,7 +67,7 @@
                     Clear Console
                 </button>
                 <button  class="button" id = "scopeLearn">
-                    Learn (will open 2 tabs)
+                    Learn
                 </button>
             </div>
         </div>
@@ -104,7 +104,117 @@
                 </button>
             </div>
         </div>
-        
 
+
+        <div class="lesson" id="eventDelegation">
+            <div class="innerLesson">
+                <h2 class="lessonHeading">
+                    Event Bubbling, Event Capturing & Event Delegation
+                </h2>
+                <h3 class="lessonSecondHeading">
+                    Open console to the right for observing outputs
+                </h3>
+                <br>
+                <h3 class="lessonSecondHeading">
+                    Click on the below divs and check the console.
+                <div id="eventDelegationPrint">
+                    <div>
+                        <h3 class="lessonSecondHeading">
+                            Event Bubbling
+                        </h3>
+                        <div id="bubblingGrandparent" class="bubbling">
+                            Grandparent
+                            <div id="bubblingParent" class="bubbling">
+                                Parent
+                                <div id="bubblingChild" class="bubbling">
+                                    Child
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div >
+                        <h3 class="lessonSecondHeading">
+                            Event Capturing
+                        </h3>
+                        <div id="capturingGrandparent" class="capturing">
+                            Grandparent
+                            <div id="capturingParent" class="capturing">
+                                Parent
+                                <div id="capturingChild" class="capturing">
+                                    Child
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div >
+                        <h3 class="lessonSecondHeading">
+                            Event Delegation (only 1 event listener)
+                        </h3>
+                        <div id="delegationBoxParent" class="capturing">
+                            
+                            <div id="delegationBox1" class="capturing">
+                                Box 1
+                            </div>
+                            <div id="delegationBox2" class="capturing">
+                                Box 2
+                            </div>
+                        </div>
+                    </div>
+
+                    <br>
+                    <p id="eventDelegationFact" class="fact">
+                    </p>
+                </div>
+
+                <button class="button" id = "eventDelegationButton">
+                    Show Event Delegation Code
+                </button>
+                <button class = "clearConsole button">
+                    Clear Console
+                </button>
+                <button  class="button" id = "eventDelegationLearn">
+                    Learn
+                </button>
+            </div>
+        </div>
+
+        <div class="lesson" id="throttling">
+            <div class="innerLesson">
+                <h2 class="lessonHeading">
+                    Throttling & Debouncing
+                </h2>
+                <h3 class="lessonSecondHeading">
+                    Open console to the right for observing outputs. Try clicking each box repeatedly.
+                </h3>
+                <div id="throttlingPrint">
+                    <br>
+                </div>
+            <div >
+                <div id="throttlingParent" class="capturing">
+                        
+                    <div id="normalBox" class="capturing">
+                            Normal Box
+                    </div>
+                    <div id="throttledBox" class="capturing">
+                            Throttled Box
+                    </div>
+                    <div id="debouncedBox" class="capturing">
+                            Debouncing Box
+                    </div>
+                </div>
+                <p id="throttlingFact" class="fact">
+                </p>
+                <br>
+                <button class="button" id = "throttlingButton">
+                    Show code
+                </button>
+                <button class = "clearConsole button">
+                    Clear Console
+                </button>
+                <button  class="button" id = "throttlingLearn">
+                    Learn
+                </button>
+            </div>
+        </div>
     </body>
 </html>

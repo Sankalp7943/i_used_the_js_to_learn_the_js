@@ -13,6 +13,11 @@ Website: sharmasankalp.com
 I was a newbie with JS when I developed this. Learnt all the stuff from Akshay Saini (youtube), you can check that out!
 Also, if you feel like you can contribute to the website through your skills, feel free to read out to me. (Please do, if you want to make significant changes)
 If you are only interested in minor changes/fixes or improvements, you can create a pull request on github.
+
+
+Contributors:
+    Sankalp Sharma (sharma.sankalp97@gmail.com)
+    +ADD MORE+
 */
 
 
@@ -203,6 +208,11 @@ const scopeEvents = function(e){
 document.querySelector("#scope").addEventListener("click", scopeEvents)
 
 
+// Event Loop and Program Execution   ---------------------------------------------------------------
+
+/*
+This function is written to give an idea about how JavaScript executes a program
+*/
 const simulation = function(){
     statements = [
         "console.log('Start')",
@@ -397,7 +407,7 @@ const simulation = function(){
         }
         reset()
         end()
-        eventListening = 1
+        eventListeningSimulation = 1
 
     }
     run()
@@ -408,8 +418,8 @@ const simulationEvents = function(e){
     console.log("Simulation div clicked")
     if (e.target.tagName === "BUTTON")
         if (e.target.id === "simulationButton"){
-            if (eventListening){
-                eventListening = 0
+            if (eventListeningSimulation){
+                eventListeningSimulation = 0
                 simulation()
             }
         }
@@ -421,22 +431,160 @@ const simulationEvents = function(e){
             clear()
         }
 }
-eventListening = 1
+eventListeningSimulation = 1
 
 document.querySelector("#simulation").addEventListener("click", simulationEvents)
 
-//event loop and everything
-// closures
-//temporal deadzone
-//settimout and closures
-//js execution using html etc complete manipulation
-// function declaration, expression etc
-//call apply bind
-//functiion currying
-//event bubbling and capturing
-//event delegation
-//throttling
-//debouncing
 
-//try your own js code [input field]
+// Event bubbling, Event Capturing and Event Delegation   ---------------------------------------------------------------
+
+
+//No event delegation in this
+document.querySelector("#bubblingGrandparent").addEventListener("click", ()=>{
+    console.log("Bubbling Grandparent Clicked!")
+}, false)
+document.querySelector("#bubblingParent").addEventListener("click", ()=>{
+    console.log("Bubbling Parent Clicked!")
+}, false)
+document.querySelector("#bubblingChild").addEventListener("click", ()=>{
+    console.log("Bubbling Child Clicked!")
+}, false)
+document.querySelector("#capturingGrandparent").addEventListener("click", ()=>{
+    console.log("Capturing Grandparent Clicked!")
+}, true)
+document.querySelector("#capturingParent").addEventListener("click", ()=>{
+    console.log("Capturing Parent Clicked!")
+}, true)
+document.querySelector("#capturingChild").addEventListener("click", ()=>{
+    console.log("Capturing Child Clicked!")
+}, true)
+// This is not a good practice
+
+// Event Delegation code
+const eventDelegation = function (e) {
+    console.log("Event Delegation Parent Box clicked")
+    if (e.target.tagName === "DIV")
+        if (e.target.id === "delegationBox1"){
+            console.log("Box 1 Clicked!")
+            }
+        else if (e.target.id === "delegationBox2"){
+            console.log("Box 2 Clicked!")
+        }
+        else{
+            console.log("Neither Box 1 or Box 2 Clicked!")
+        }
+}
+document.querySelector("#delegationBoxParent").addEventListener("click", eventDelegation, false)
+
+const delegationEvents = function(e){
+    if (e.target.tagName === "BUTTON")
+        if (e.target.id === "eventDelegationButton"){
+            console.log("eventDelegation", eventDelegation)
+            var fact = "Fact: Having multiple event listeners on a webpage can hit its performance. Event Delegation helps us in optimizing it."
+            document.querySelector("#eventDelegationFact").innerHTML = fact
+        }
+        else if (e.target.id === "eventDelegationLearn"){
+            link1 = "https://youtu.be/aVSf0b1jVKk"
+            window.open(link1, "_blank")
+            link2 = "https://youtu.be/3KJI1WZGDrg"
+            window.open(link2, "_blank")
+        }
+        else{
+            clear()
+        }
+}
+document.querySelector("#eventDelegation").addEventListener("click", delegationEvents, false)
+
+
+
+
+// Throttling & Debouncing   ---------------------------------------------------------------
+
+const normal = function(msg){
+    console.log(msg)
+}
+
+const throttling = function(normal, limit) {
+    let flag = true
+    return function(){
+        let context = this
+        args = arguments
+        if (flag){
+            flag = false
+            normal.apply(context, args)
+            setTimeout(() =>{
+                flag = true
+            }, limit)
+        }
+    }
+}
+const throttled = throttling(normal, 500)
+const debouncing = function(func, limit) {
+    let timer
+    return function(){
+        let context = this
+        args = arguments
+        clearTimeout(timer)
+        timer = setTimeout(() => {
+            func.apply(context, arguments)
+        }, limit)
+    }
+}
+const debounced = debouncing(normal, 500)
+
+
+
+const throttlingDebouncing = function (e) {
+    if (e.target.tagName === "DIV")
+        if (e.target.id === "normalBox"){
+            console.log("Normal Box Clicked!")
+            }
+        else if (e.target.id === "throttledBox"){
+            throttled("Throttling Box Clicked")
+        }
+        else if (e.target.id === "debouncedBox"){
+            debounced("Debouncing Box Clicked")
+        }
+        else{
+            console.log("Invalid Click")
+        }
+}
+document.querySelector("#throttlingParent").addEventListener("click", throttlingDebouncing, false)
+
+const throttlingEvents = function(e){
+    if (e.target.tagName === "BUTTON")
+        if (e.target.id === "throttlingButton"){
+            console.log("normal", normal)
+            console.log("throttled", throttled)
+            console.log("throttling", throttling)
+            console.log("debounced", debounced)
+            console.log("debouncing", debouncing)
+            var fact = "Fact: Debouncing and Throttling are really similar and use of one over the other depends on the scenario at hand."
+            document.querySelector("#throttlingFact").innerHTML = fact
+        }
+        else if (e.target.id === "throttlingLearn"){
+            link1 = "https://youtu.be/81NGEXAaa3Y"
+            window.open(link1, "_blank")
+            link2 = "https://youtu.be/tJhA0DrH5co"
+            window.open(link2, "_blank")
+            link3 = "https://youtu.be/Zo-6_qx8uxg"
+            window.open(link3, "_blank")
+        }
+        else{
+            clear()
+        }
+}
+document.querySelector("#throttling").addEventListener("click", throttlingEvents, false)
+
+
+// closures
+// temporal deadzone
+// settimout and closures
+// function declaration, expression etc
+// call apply bind
+// functiion currying
+// comments on top do it
+//local storage
+
+//try your own js code [input field] a separate js code
 

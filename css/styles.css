@@ -109,3 +109,43 @@
     color: red;
 
 }
+
+.bubbling{
+    box-sizing: border-box;
+    appearance: none;
+    background-color: transparent;
+    border: 2px solid #1abcae;
+    border-radius: 0.6em;
+    color: #1abcae;
+    cursor: pointer;
+    display: inline-block;
+    align-self: center;
+    font-size: 1.1rem;
+    line-height: 1;
+    margin: .5em;
+    padding: 1.0em 1em;
+    text-decoration: none;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+}
+
+.capturing{
+    box-sizing: border-box;
+    appearance: none;
+    background-color: transparent;
+    border: 2px solid #1abcae;
+    border-radius: 0.6em;
+    color: #1abcae;
+    cursor: pointer;
+    display: inline-block;
+    align-self: center;
+    font-size: 1.1rem;
+    line-height: 1;
+    margin: .5em;
+    padding: 1.0em 1em;
+    text-decoration: none;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+}
