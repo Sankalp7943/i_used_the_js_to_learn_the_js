@@ -6,6 +6,7 @@
         </title>
         <link rel="icon" type="image/png" href="images/icon.png" />
         <link rel="stylesheet" type="text/css" href="css/styles.css">
+        <script defer src="scripts/basic.js"></script>
         <script defer src="scripts/myscripts.js"></script>
     </head>
     <body class = "completePage">
@@ -22,18 +23,28 @@
 
         <div class="navbarclass" id="navbar">
             <div class="navbarButtons">
-                <button class="navbutton">
+                <button class="navbutton" id="home">
                     Home
                 </button>
-                <button class = "navbutton">
+                <button class = "navbutton" id="contribute">
                     Contribute
                 </button>
-                <button  class="navbutton">
+                <button  class="navbutton" id="developer">
                     About Developer
                 </button>
-                <button  class="navbutton">
+                <button  class="navbutton" id="modalButton">
                     Support
                 </button>
+                <div id="myModal" class="modal">
+
+                    <!-- Modal content -->
+                    <div class="modal-content">
+                      <span class="close">&times;</span>
+                      <img src="images/qr_code.jpg" id="qr">
+                      <p>Contributions will be spent on creating an OpenSource Community and hosting this site on a domain</p>
+                    </div>
+                  
+                  </div>
             </div>
         </div>
         <div class="lesson" id="hoisting">
