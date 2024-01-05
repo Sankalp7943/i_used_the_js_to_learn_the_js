@@ -1,0 +1,11 @@
+{
+  "name": "i_used_the_js_to_learn_the_js",
+  "version": "1.0.0",
+  "description": "A website to showcase various JavaScript concepts for better learning of self and site visitors. Developed using HTML, CSS and JavaScript.",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Sankalp Sharma",
+  "license": "ISC"
+}
