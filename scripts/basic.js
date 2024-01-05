@@ -1,8 +1,3 @@
-// Get the modal
-var modal = document.getElementById("myModal");
-
-// Get the button that opens the modal
-var btn = document.getElementById("modalButton");
 
 // Get the <span> element that closes the modal
 var span = document.getElementsByClassName("close")[0];
@@ -25,7 +20,7 @@ window.onclick = function(event) {
 }
 
 document.querySelector("#developer").addEventListener("click", ()=>{
-    window.open("http://www.sharmasankalp.com", "_blank")
+    window.open("https://www.sharmasankalp.com", "_blank")
 })
 document.querySelector("#home").addEventListener("click", ()=>{
     window.location.reload();
